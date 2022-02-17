@@ -43,7 +43,7 @@
             <% if user_signed_in? && current_user.id == @prototype.user_id %>
               <li class="comments_list">
                 <%= comment.content %>
-                <%= link_to @prototype.user.name, "/users/#{@prototype.user_id}", class: :comment_user %>
+                <%= link_to comment.user.name, "/users/#{comment.user_id}", class: :comment_user %>
               </li>
             <% end %>
           <% end %>
